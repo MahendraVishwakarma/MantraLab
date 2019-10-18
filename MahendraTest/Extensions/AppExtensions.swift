@@ -58,6 +58,7 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate{
     @objc func expand_collepsCell(sender:UIButton){
         
         self.selectedSection = self.selectedSection < 0 ? sender.tag : sender.tag != self.selectedSection ? sender.tag : -1
+        
         if(self.selectedSection >= 0){
            let subCat = menuList[self.selectedSection].subCategory
             subCategoryList.removeAll()
